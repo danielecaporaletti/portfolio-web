@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Daniele Caporaletti</title>
+    <meta name="description" content="Portfolio Template for Developer" />
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init('N1V8RKx1-LFYsgfvr');
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // generate a five digit number for the contact_number variable
+                this.contact_number.value = Math.random() * 100000 | 0;
+                // these IDs from the previous steps
+                emailjs.sendForm('service_820ioh9', 'template_cu8oe29', this)
+                    .then(function() {
+                        alert('INVIATO!');
+                    }, function(error) {
+                        alert('Scusami, potrebbero esserci dei problemi. Utilizza altri canali per contattarmi. Grazie', error);
+                    });
+                return false;
+            });
+        }
+    </script>
+
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__content">
+        <div class="header__logo-container">
+          <div class="header__logo-img-cont">
+            <img
+              src="./assets/png/daniele-caporaletti.png"
+              alt="Ram Maheshwari Logo Image"
+              class="header__logo-img"
+            />
+          </div>
+          <span class="header__logo-sub">Daniele Caporaletti</span>
+        </div>
+        <div class="header__main">
+          <ul class="header__links">
+            <li class="header__link-wrapper">
+              <a href="./index.html" class="header__link"> Home </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="./index.html#about" class="header__link">About </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="./index.html#projects" class="header__link">
+                Progetti
+              </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="./index.html#contact" class="header__link"> Contatti </a>
+            </li>
+          </ul>
+          <div class="header__main-ham-menu-cont">
+            <img
+              src="./assets/svg/ham-menu.svg"
+              alt="hamburger menu"
+              class="header__main-ham-menu"
+            />
+            <img
+              src="./assets/svg/ham-menu-close.svg"
+              alt="hamburger menu close"
+              class="header__main-ham-menu-close d-none"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="header__sm-menu">
+        <div class="header__sm-menu-content">
+          <ul class="header__sm-menu-links">
+            <li class="header__sm-menu-link">
+              <a href="./index.html"> Home </a>
+            </li>
+
+            <li class="header__sm-menu-link">
+              <a href="./index.html#about"> About </a>
+            </li>
+
+            <li class="header__sm-menu-link">
+              <a href="./index.html#projects"> Progetti </a>
+            </li>
+
+            <li class="header__sm-menu-link">
+              <a href="./index.html#contact"> Contatti </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <section class="home-hero">
+      <div class="home-hero__content">
+        <h1 class="heading-primary">Ciao, io sono Daniele Caporaletti</h1>
+        <div class="home-hero__info">
+          <p class="text-primary">
+            Sono un Full Stack Developer junior appassionato, sempre pronto ad apprendere nuove competenze 
+            e ad affrontare nuove sfide. Mi diverto nel processo di crescita professionale e mi impegno a migliorare costantemente.
+          </p>
+        </div>
+        <div class="home-hero__cta">
+          <a href="./#projects" class="btn btn--bg">Progetti</a>
+        </div>
+      </div>
+      <div class="home-hero__socials">
+        <div class="home-hero__social">
+          <a href="https://www.linkedin.com/in/daniele-caporaletti-86a509224" class="home-hero__social-icon-link">
+            <img
+              src="./assets/png/linkedin-ico.png"
+              alt="icon"
+              class="home-hero__social-icon"
+            />
+          </a>
+        </div>
+        <div class="home-hero__social">
+          <a href="https://github.com/danielecaporaletti" class="home-hero__social-icon-link">
+            <img
+              src="./assets/png/github-ico.png"
+              alt="icon"
+              class="home-hero__social-icon"
+            />
+          </a>
+        </div>
+      </div>
+      <div class="home-hero__mouse-scroll-cont">
+        <div class="mouse"></div>
+      </div>
+    </section>
+    <section id="about" class="about sec-pad">
+      <div class="main-container">
+        <h2 class="heading heading-sec heading-sec__mb-med">
+          <span class="heading-sec__main">About Me</span>
+          <span class="heading-sec__sub">
+            Qui è possibile reperire ulteriori informazioni su di me, sulle mie attività e sulle mie attuali competenze in ambito di programmazione e tecnologia.
+          </span>
+        </h2>
+        <div class="about__content">
+          <div class="about__content-main">
+            <h3 class="about__content-title">Vieni a conoscermi!</h3>
+            <div class="about__content-details">
+              <p class="about__content-details-para">
+                Ciao! sono
+                <strong>Daniele</strong>
+                e sono un<strong> Full-stack Developer </strong> che vive
+                a Brescia. Continuamente mi diverto a esplorare nuovi aspetti della,  
+                <strong> programmazione </strong>
+                dato che l'esperienza pratica è spesso più preziosa dello studio teorico.
+                Adoro   
+                <strong>Java </strong>
+                e sto cercando di scoprire tutto quello che c'è da sapere su questo linguaggio.
+              </p>
+              <p class="about__content-details-para">
+                Ho fatto un sacco di progetti interessanti e non vedo l'ora di mostrarveli!
+                
+              </p>
+            </div>
+            <a href="./index.html#projects" class="btn btn--med btn--theme dynamicBgClr"
+              >Progetti</a
+            >
+          </div>
+          <div class="about__content-skills">
+            <h3 class="about__content-title">Le mie Competenze</h3>
+            <div class="skills">
+              <div class="skills__skill">Java</div>
+              <div class="skills__skill">Spring</div>
+              <div class="skills__skill">SQL</div>
+              <div class="skills__skill">HTML</div>
+              <div class="skills__skill">CSS</div>
+              <div class="skills__skill">JavaScript</div>
+              <div class="skills__skill">React</div>
+              <div class="skills__skill">GIT</div>
+              <div class="skills__skill">Bash</div>
+              <div class="skills__skill">Docker</div>
+              <div class="skills__skill">Jenkins</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="projects" class="projects sec-pad">
+      <div class="main-container">
+        <h2 class="heading heading-sec heading-sec__mb-bg">
+          <span class="heading-sec__main">Progetti</span>
+          <span class="heading-sec__sub">
+            Qui puoi trovare i miei progetti pratici che ho creato per allenarmi. Ognuno di essi é spiegato nel suo caso studio.
+          </span>
+        </h2>
+
+        <div class="projects__content">
+          <div class="projects__row">
+            <div class="projects__row-img-cont">
+              <img
+                src="./assets/jpeg/project-mockup-example.jpeg"
+                alt="Software Screenshot"
+                class="projects__row-img"
+                loading="lazy"
+              />
+            </div>
+            <div class="projects__row-content">
+              <h3 class="projects__row-content-title">Project 1</h3>
+              <p class="projects__row-content-desc">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic
+                facilis tempora, explicabo quae quod deserunt eius sapiente
+                praesentium.
+              </p>
+              <a
+                href="./project-1.html"
+                class="btn btn--med btn--theme dynamicBgClr"
+                target="_blank"
+                >Caso Studio</a
+              >
+            </div>
+          </div>
+          <div class="projects__row">
+            <div class="projects__row-img-cont">
+              <img
+                src="./assets/jpeg/project-mockup-example.jpeg"
+                alt="Software Screenshot"
+                class="projects__row-img"
+                loading="lazy"
+              />
+            </div>
+            <div class="projects__row-content">
+              <h3 class="projects__row-content-title">Project 2</h3>
+              <p class="projects__row-content-desc">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic
+                facilis tempora, explicabo quae quod deserunt eius sapiente
+                praesentium.
+              </p>
+              <a
+                href="./project-2.html"
+                class="btn btn--med btn--theme dynamicBgClr"
+                target="_blank"
+                >Caso Studio</a
+              >
+            </div>
+          </div>
+          <div class="projects__row">
+            <div class="projects__row-img-cont">
+              <img
+                src="./assets/jpeg/project-mockup-example.jpeg"
+                alt="Software Screenshot"
+                class="projects__row-img"
+                loading="lazy"
+              />
+            </div>
+            <div class="projects__row-content">
+              <h3 class="projects__row-content-title">Project 3</h3>
+              <p class="projects__row-content-desc">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic
+                facilis tempora, explicabo quae quod deserunt eius sapiente
+                praesentium.
+              </p>
+              <a
+                href="./project-3.html"
+                class="btn btn--med btn--theme dynamicBgClr"
+                target="_blank"
+                >Caso Studio</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="contact" class="contact sec-pad dynamicBg">
+      <div class="main-container">
+        <h2 class="heading heading-sec heading-sec__mb-med">
+          <span class="heading-sec__main heading-sec__main--lt">Contatti</span>
+          <span class="heading-sec__sub heading-sec__sub--lt">
+            Scrivimi pure qualsiasi cosa e vedró come posso aiutarti.
+          </span>
+        </h2>
+        <div class="contact__form-container">
+          <form id="contact-form" method="post" enctype="text/plain" class="contact__form">
+            <div class="contact__form-field">
+              <input type="hidden" name="contact_number">
+              <label class="contact__form-label" for="name">Nome</label>
+              <input
+                required
+                placeholder="Inserisci il tuo Nome"
+                type="text"
+                class="contact__form-input"
+                name="user_name"
+                id="name"
+              />
+            </div>
+            <div class="contact__form-field">
+              <label class="contact__form-label" for="email">Email</label>
+              <input
+                required
+                placeholder="Inserisci la tua Mail"
+                type="email"
+                class="contact__form-input"
+                name="user_email"
+                id="email"
+              />
+            </div>
+            <div class="contact__form-field">
+              <label class="contact__form-label" for="message">Messaggio</label>
+              <textarea
+                required
+                cols="30"
+                rows="10"
+                class="contact__form-input"
+                placeholder="Inserisci il tuo messaggio"
+                name="message"
+                id="message"
+              ></textarea>
+            </div>
+            <input type="submit" value="Invia" class="btn btn--theme contact__btn">
+          </input>
+          </form>
+        </div>
+      </div>
+    </section>
+    <footer class="main-footer">
+      <div class="main-container">
+        <div class="main-footer__upper">
+          <div class="main-footer__row main-footer__row-1">
+            <h2 class="heading heading-sm main-footer__heading-sm">
+              <span>Social</span>
+            </h2>
+            <div class="main-footer__social-cont">
+              <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/daniele-caporaletti-86a509224">
+                <img
+                  class="main-footer__icon"
+                  src="./assets/png/linkedin-ico.png"
+                  alt="icon"
+                />
+              </a>
+              <a target="_blank" rel="noreferrer" href="https://github.com/danielecaporaletti">
+                <img
+                  class="main-footer__icon"
+                  src="./assets/png/github-ico.png"
+                  alt="icon"
+                />
+              </a>
+            </div>
+          </div>
+          <div class="main-footer__row main-footer__row-2">
+            <h4 class="heading heading-sm text-lt">Daniele Caporaletti</h4>
+            <p class="main-footer__short-desc">
+              Portfolio personalizzato da Daniele Caporaletti
+            </p>
+          </div>
+        </div>
+
+        <!-- If you give me some credit or shoutout here by linking to my website, then it will be a big thing for me and will help me a lot :) -->
+        <div class="main-footer__lower">
+          &copy; Copyright 2021. Made by
+          <a rel="noreferrer" target="_blank" href="https://rammaheshwari.com"
+            >Ram Maheshwari</a
+          >
+        </div>
+      </div>
+    </footer>
+    <script src="./index.js"></script>
+  </body>
+</html>
